@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"e:\\\\MyWebpage\\\\css\"\" && echo \"---\" && ls -la \"e:MyWebpagejs\"\")"
+    ]
+  }
+}
