@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls -la \"e:\\\\MyWebpage\\\\css\"\" && echo \"---\" && ls -la \"e:MyWebpagejs\"\")"
+      "Bash(ls -la \"e:\\\\MyWebpage\\\\css\"\" && echo \"---\" && ls -la \"e:MyWebpagejs\"\")",
+      "WebFetch(domain:arid99t.github.io)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(start \"\" \"/e/MyWebpage/index.html\")"
     ]
   }
 }
