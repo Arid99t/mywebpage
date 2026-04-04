@@ -816,6 +816,178 @@ section {
     color: var(--color-primary);
 }
 
+/* ==================== SKILLS ==================== */
+.skills {
+    background: var(--color-bg-light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: var(--color-bg-white);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-secondary);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ==================== EXPERIENCE ==================== */
+.experience {
+    background: var(--color-bg-white);
+}
+
+.experience-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.experience-item {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-bg-light);
+    border-radius: 0 8px 8px 0;
+}
+
+.experience-header {
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-family: var(--font-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.experience-org {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.experience-date {
+    display: block;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}
+
+.experience-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-bullets li {
+    color: var(--color-text-grey);
+    font-size: 0.95rem;
+    padding: 0.4rem 0 0.4rem 1.4rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+}
+
+/* ==================== EDUCATION STANDALONE ==================== */
+.education-standalone {
+    background: var(--color-bg-light);
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.edu-card {
+    background: var(--color-bg-white);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.edu-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-family: var(--font-secondary);
+    margin-bottom: 0.35rem;
+}
+
+.edu-org {
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.edu-date {
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.edu-modules {
+    color: var(--color-text-grey);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.certificates-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.certificates-list h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-family: var(--font-secondary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.cert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .nav-links {
@@ -856,6 +1028,18 @@ section {
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        padding: var(--spacing-md);
     }
 
     .footer-content {
