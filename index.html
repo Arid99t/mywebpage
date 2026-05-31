@@ -3,362 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arindam Dutta</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Arindam Dutta — Desktop</title>
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/desktop.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <div class="logo">
-                Arindam Dutta
-            </div>
-            <ul class="nav-links">
-                <li><a href="#research" class="nav-link">Research</a></li>
-<li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-image-container">
-                <img src="assets/images/profile.jpeg" alt="Arindam Dutta">
-            </div>
-            <h1 class="hero-title">Arindam Dutta</h1>
-            <p class="hero-subtitle">Research Associate (VR Lab) | University of Birmingham</p>
-            <p class="hero-subtitle">Specialising in human-computer interaction, immersive VR/XR systems, visuo-haptic perception, and interactive experimental design</p>
-            <div class="profile-social">
-                <a href="mailto:arindam.dutta99999@gmail.com" class="social-icon" title="Email">✉</a>
-                <a href="https://www.linkedin.com/in/arin99/" class="social-icon" title="LinkedIn" target="_blank">in</a>
-            </div>
-            <div class="cta-buttons">
-                <a href="#research" class="btn btn-primary">Research</a>
-                <a href="#projects" class="btn btn-secondary">Projects</a>
-                <a href="#blog" class="btn btn-secondary">Blog</a>
-            </div>
-        </div>
-    </section>
+<!-- ==================== DESKTOP ==================== -->
+<main id="desktop">
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <div class="research-header">
-                <h2 class="section-title">Research</h2>
-                <p class="section-subtitle">My research focuses on visuo-haptic perception, immersive VR/XR systems, and interactive experimental design.</p>
-            </div>
+    <!-- Desktop icons -->
+    <ul id="desktop-icons">
+        <li><button class="desk-icon" data-open="about"><span class="ico">🖥️</span><span class="lbl">About Me</span></button></li>
+        <li><button class="desk-icon" data-open="research"><span class="ico">📁</span><span class="lbl">Research</span></button></li>
+        <li><button class="desk-icon" data-open="skills"><span class="ico">🧰</span><span class="lbl">Skills</span></button></li>
+        <li><button class="desk-icon" data-open="education"><span class="ico">🎓</span><span class="lbl">Education</span></button></li>
+        <li><button class="desk-icon" data-open="projects"><span class="ico">💼</span><span class="lbl">Projects</span></button></li>
+        <li><button class="desk-icon" data-open="blog"><span class="ico">📝</span><span class="lbl">Blog</span></button></li>
+        <li><button class="desk-icon" data-open="minesweeper"><span class="ico">💣</span><span class="lbl">Minesweeper</span></button></li>
+        <li><a class="desk-icon" href="classic.html" title="Switch to the modern layout"><span class="ico">🗔</span><span class="lbl">Classic View</span></a></li>
+    </ul>
 
-            <div class="research-grid">
-                <!-- Masters Thesis -->
-                <article class="research-card">
-                    <div class="research-content">
-                        <h3 class="research-title">Retention of Haptic Memory</h3>
-                        <p class="research-description"><strong>Masters Thesis</strong><br>Supervisors: Eyal Ofek, Massimiliano Di Luca, Diar Abdlkarim</p>
-                        <div class="research-tags">
-                            <span class="tag">Haptic Perception</span>
-                            <span class="tag">Memory</span>
-                            <span class="tag">HCI</span>
-                        </div>
-                    </div>
-                </article>
+    <!-- ==================== WINDOWS ==================== -->
+    <div id="window-layer">
 
-                <!-- Working Paper -->
-                <article class="research-card">
-                    <div class="research-content">
-                        <h3 class="research-title">Estimating Thresholds for Object Size Discrimination during Bimanual Interaction</h3>
-                        <p class="research-description">Yilong Lin, Eyal Ofek, Massimiliano Di Luca, Arindam Dutta<br><em>Working Paper - Initial version intended for submission to HCI conferences (e.g., CHI/UIST)</em></p>
-                        <div class="research-tags">
-                            <span class="tag">Bimanual Interaction</span>
-                            <span class="tag">Size Discrimination</span>
-                            <span class="tag">VR</span>
-                        </div>
+        <!-- About -->
+        <section class="win98-window" id="win-about" data-title="About Me" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">🖥️ About Me</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
                     </div>
-                </article>
-            </div>
-
-            <div class="research-highlights">
-                <h3 class="highlights-title">Current Role</h3>
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📄</span>
-                        <div class="highlight-content">
-                            <h4>Adaptive Metronome Algorithm</h4>
-                            <p>Collaborated and developed an adaptive metronome algorithm for the ARME (Augmented Reality Music Ensemble) project to dynamically synchronise with real-world tempo variations</p>
-                            <span class="highlight-year">Dec 2024 - Present • University of Birmingham</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📄</span>
-                        <div class="highlight-content">
-                            <h4>iOS &amp; macOS Development (ARME)</h4>
-                            <p>Developed native iOS and macOS applications in Swift, managing cross-platform deployment, build pipelines, and performance optimisation across Apple platforms.</p>
-                            <span class="highlight-year">Dec 2024 - Present • University of Birmingham</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📄</span>
-                        <div class="highlight-content">
-                            <h4>Video Segmentation Pipeline (SAM2)</h4>
-                            <p>Engineered automated video segmentation pipelines using Python (SAM2) to process media assets for integration into VR environments, applying software best practices for maintainability and reproducibility.</p>
-                            <span class="highlight-year">Dec 2024 - Present • University of Birmingham</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📄</span>
-                        <div class="highlight-content">
-                            <h4>VR Lab Web Platform</h4>
-                            <p>Maintained and updated the VR Lab web platform (HTML/CSS/JavaScript), managing version control and ensuring cross-browser compatibility.</p>
-                            <span class="highlight-year">Dec 2024 - Present • University of Birmingham</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📄</span>
-                        <div class="highlight-content">
-                            <h4>Research Seminar Organiser (BhamXR)</h4>
-                            <p>Coordinating interdisciplinary research conferences and seminars, collaborating with researchers across the UK.</p>
-                            <span class="highlight-year">Mar 2025 - Present • University of Birmingham</span>
+                </div>
+                <div class="window-body">
+                    <div class="about-grid">
+                        <img class="about-photo" src="assets/images/profile.jpeg" alt="Arindam Dutta">
+                        <div>
+                            <h2 class="about-name">Arindam Dutta</h2>
+                            <p>Research Associate (VR Lab) | University of Birmingham</p>
+                            <p>Specialising in human-computer interaction, immersive VR/XR systems, visuo-haptic perception, and interactive experimental design.</p>
+                            <div class="about-links">
+                                <a href="mailto:arindam.dutta99999@gmail.com"><button>✉ Email</button></a>
+                                <a href="https://www.linkedin.com/in/arin99/" target="_blank" rel="noopener"><button>in LinkedIn</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Languages, platforms, and tools developed across research and industry projects.</p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Swift</span>
+        <!-- Research -->
+        <section class="win98-window" id="win-research" data-title="Research" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">📁 Research</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Platforms &amp; Engines</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Unity (C#)</span>
-                        <span class="tag">Unreal Engine (C++)</span>
-                        <span class="tag">iOS/macOS (Swift)</span>
-                        <span class="tag">Node.js</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Software Engineering</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Agile Development</span>
-                        <span class="tag">Git/GitHub</span>
-                        <span class="tag">CI Workflows</span>
-                        <span class="tag">Requirements Analysis</span>
-                        <span class="tag">Integration Testing</span>
-                        <span class="tag">Code Review</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools &amp; Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="tag">SolidWorks</span>
-                        <span class="tag">Blender</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">R</span>
-                        <span class="tag">Machine Learning (Python)</span>
-                        <span class="tag">3D Modelling &amp; Prototyping</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Core Competencies</h3>
-                    <div class="skill-tags">
-                        <span class="tag">System-Level Design</span>
-                        <span class="tag">Cross-Platform Development</span>
-                        <span class="tag">Real-Time Software</span>
-                        <span class="tag">Algorithm Design</span>
-                        <span class="tag">User-Centred Testing</span>
-                    </div>
+                <div class="window-body">
+                    <p class="lead">My research focuses on visuo-haptic perception, immersive VR/XR systems, and interactive experimental design.</p>
+
+                    <fieldset>
+                        <legend>Retention of Haptic Memory</legend>
+                        <p><strong>Masters Thesis</strong><br>Supervisors: Eyal Ofek, Massimiliano Di Luca, Diar Abdlkarim</p>
+                        <p class="tags"><span>Haptic Perception</span><span>Memory</span><span>HCI</span></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Estimating Thresholds for Object Size Discrimination during Bimanual Interaction</legend>
+                        <p>Yilong Lin, Eyal Ofek, Massimiliano Di Luca, Arindam Dutta<br><em>Working Paper — Initial version intended for submission to HCI conferences (e.g., CHI/UIST)</em></p>
+                        <p class="tags"><span>Bimanual Interaction</span><span>Size Discrimination</span><span>VR</span></p>
+                    </fieldset>
+
+                    <h3 class="block-heading">Current Role — University of Birmingham</h3>
+                    <ul class="tree-view">
+                        <li><strong>Adaptive Metronome Algorithm</strong> <em>(Dec 2024 – Present)</em><br>Collaborated and developed an adaptive metronome algorithm for the ARME (Augmented Reality Music Ensemble) project to dynamically synchronise with real-world tempo variations.</li>
+                        <li><strong>iOS &amp; macOS Development (ARME)</strong> <em>(Dec 2024 – Present)</em><br>Developed native iOS and macOS applications in Swift, managing cross-platform deployment, build pipelines, and performance optimisation across Apple platforms.</li>
+                        <li><strong>Video Segmentation Pipeline (SAM2)</strong> <em>(Dec 2024 – Present)</em><br>Engineered automated video segmentation pipelines using Python (SAM2) to process media assets for integration into VR environments, applying software best practices for maintainability and reproducibility.</li>
+                        <li><strong>VR Lab Web Platform</strong> <em>(Dec 2024 – Present)</em><br>Maintained and updated the VR Lab web platform (HTML/CSS/JavaScript), managing version control and ensuring cross-browser compatibility.</li>
+                        <li><strong>Research Seminar Organiser (BhamXR)</strong> <em>(Mar 2025 – Present)</em><br>Coordinating interdisciplinary research conferences and seminars, collaborating with researchers across the UK.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-standalone">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-cards">
-                <div class="edu-card">
-                    <h3>MSc Human Computer Interaction</h3>
-                    <p class="edu-org">University of Birmingham, UK</p>
-                    <p class="edu-date">2023 – 2024</p>
-                    <p class="edu-modules"><strong>Key Modules:</strong> HCI Theory and Practice, Machine Learning, Intelligent Interactive Systems, Research Topics in HCI, Experimental Design &amp; Evaluation Methods, Mobile &amp; Ubiquitous Computing</p>
+        <!-- Skills -->
+        <section class="win98-window" id="win-skills" data-title="Skills" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">🧰 Technical Skills</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
+                    </div>
                 </div>
-                <div class="edu-card">
-                    <h3>BSc Physics</h3>
-                    <p class="edu-org">Cotton University, Assam, India</p>
-                    <p class="edu-date">2017 – 2020</p>
-                    <p class="edu-modules"><strong>Key Modules:</strong> Quantum Mechanics, Classical Mechanics, Electromagnetism, Waves &amp; Optics, Thermodynamics &amp; Statistical Physics</p>
-                </div>
-            </div>
-            <div class="certificates-list">
-                <h3>Certificates</h3>
-                <div class="cert-tags">
-                    <span class="tag">Unity VR/XR Developer – Udemy (2024)</span>
-                    <span class="tag">UI/UX Design Training – Internshala (2023)</span>
-                    <span class="tag">Front-end Web Development – Internshala (2022)</span>
-                    <span class="tag">Graphics Design Training – Internshala (2021)</span>
-                    <span class="tag">Creative Writing – Internshala (2021)</span>
-                    <span class="tag">Photography – PVTI Guwahati (2017)</span>
-                    <span class="tag">Photoshop – PVTI Guwahati (2017)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">A collection of VR/XR, interactive, and software development projects.</p>
-
-            <div class="projects-grid">
-                <!-- VR Chemistry Lab -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project-vr-lab.jpg" alt="VR Chemistry Lab">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">VR Chemistry Lab</h3>
-                        <p class="project-description">Collaborated and designed a Virtual Reality chemistry lab as a Unity Developer Intern at the CTL (Collaborative Teaching Laboratory) at the University of Birmingham. Built immersive lab simulations enabling students to conduct chemistry experiments in a virtual environment.</p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">VR</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">Education</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Metronome Synchronisation -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project-metronome.jpg" alt="Metronome Synchronisation">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">100 Metronome Synchronisation</h3>
-                        <p class="project-description">Developed an interactive Unity environment featuring 100 metronomes where users tap in real time to control one metronome, and all 100 metronomes gradually synchronise with the user's rhythm. A real-time demonstration of coupled oscillator synchronisation.</p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">Interactive</span>
-                            <span class="tag">Simulation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Vuzix M400 Database App -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project-vuzix.jpg" alt="Vuzix M400 Database Application">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Vuzix M400 Database Application</h3>
-                        <p class="project-description">Developed a database application for Vuzix M400 smart glasses that scans QR codes on objects to access stored information, and allows users to borrow and return items directly through the AR interface.</p>
-                        <div class="project-tags">
-                            <span class="tag">AR</span>
-                            <span class="tag">Vuzix M400</span>
-                            <span class="tag">QR Scanning</span>
-                            <span class="tag">Database</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Kenilworth Project -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project-kenilworth.jpg" alt="Kenilworth Castle VR Experience">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Kenilworth Castle VR Experience</h3>
-                        <p class="project-description">Recorded and prepared videos of people and environments re-enacting scenes from the 1500s at Kenilworth Castle. Processed the footage for a virtual augmented environment, placing lifelike avatars into an immersive historical reconstruction.</p>
-                        <div class="project-tags">
-                            <span class="tag">VR/AR</span>
-                            <span class="tag">Video Processing</span>
-                            <span class="tag">Historical</span>
-                            <span class="tag">3D Environments</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="projects">
-        <div class="container">
-            <h2 class="section-title">Blog</h2>
-            <p class="section-subtitle">Thoughts, tutorials, and insights on VR/XR development and HCI research.</p>
-
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Coming Soon</h3>
-                        <p class="project-description">Blog posts will be added here soon. Stay tuned for articles on VR development, HCI research, and more.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2026 Arindam Dutta. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/arin99/" class="footer-link" target="_blank">LinkedIn</a>
-                    <a href="mailto:arindam.dutta99999@gmail.com" class="footer-link">Email</a>
+                <div class="window-body">
+                    <p class="lead">Languages, platforms, and tools developed across research and industry projects.</p>
+                    <fieldset>
+                        <legend>Languages</legend>
+                        <p class="tags"><span>C#</span><span>C++</span><span>Python</span><span>JavaScript</span><span>HTML/CSS</span><span>Swift</span></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Platforms &amp; Engines</legend>
+                        <p class="tags"><span>Unity (C#)</span><span>Unreal Engine (C++)</span><span>iOS/macOS (Swift)</span><span>Node.js</span></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Software Engineering</legend>
+                        <p class="tags"><span>Agile Development</span><span>Git/GitHub</span><span>CI Workflows</span><span>Requirements Analysis</span><span>Integration Testing</span><span>Code Review</span></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tools &amp; Frameworks</legend>
+                        <p class="tags"><span>SolidWorks</span><span>Blender</span><span>Figma</span><span>R</span><span>Machine Learning (Python)</span><span>3D Modelling &amp; Prototyping</span></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Core Competencies</legend>
+                        <p class="tags"><span>System-Level Design</span><span>Cross-Platform Development</span><span>Real-Time Software</span><span>Algorithm Design</span><span>User-Centred Testing</span></p>
+                    </fieldset>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div id="modalBody">
-                <!-- Project details will be loaded here -->
+        <!-- Education -->
+        <section class="win98-window" id="win-education" data-title="Education" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">🎓 Education</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <fieldset>
+                        <legend>MSc Human Computer Interaction</legend>
+                        <p>University of Birmingham, UK · 2023 – 2024</p>
+                        <p><strong>Key Modules:</strong> HCI Theory and Practice, Machine Learning, Intelligent Interactive Systems, Research Topics in HCI, Experimental Design &amp; Evaluation Methods, Mobile &amp; Ubiquitous Computing</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>BSc Physics</legend>
+                        <p>Cotton University, Assam, India · 2017 – 2020</p>
+                        <p><strong>Key Modules:</strong> Quantum Mechanics, Classical Mechanics, Electromagnetism, Waves &amp; Optics, Thermodynamics &amp; Statistical Physics</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Certificates</legend>
+                        <p class="tags"><span>Unity VR/XR Developer – Udemy (2024)</span><span>UI/UX Design Training – Internshala (2023)</span><span>Front-end Web Development – Internshala (2022)</span><span>Graphics Design Training – Internshala (2021)</span><span>Creative Writing – Internshala (2021)</span><span>Photography – PVTI Guwahati (2017)</span><span>Photoshop – PVTI Guwahati (2017)</span></p>
+                    </fieldset>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="win98-window" id="win-projects" data-title="Projects" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">💼 Projects</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p class="lead">A collection of VR/XR, interactive, and software development projects.</p>
+
+                    <fieldset>
+                        <legend>VR Chemistry Lab</legend>
+                        <p>Collaborated and designed a Virtual Reality chemistry lab as a Unity Developer Intern at the CTL (Collaborative Teaching Laboratory) at the University of Birmingham. Built immersive lab simulations enabling students to conduct chemistry experiments in a virtual environment.</p>
+                        <p class="tags"><span>Unity</span><span>VR</span><span>C#</span><span>Education</span></p>
+                        <p><a href="#" class="project-link">View Project →</a></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>100 Metronome Synchronisation</legend>
+                        <p>Developed an interactive Unity environment featuring 100 metronomes where users tap in real time to control one metronome, and all 100 metronomes gradually synchronise with the user's rhythm. A real-time demonstration of coupled oscillator synchronisation.</p>
+                        <p class="tags"><span>Unity</span><span>C#</span><span>Interactive</span><span>Simulation</span></p>
+                        <p><a href="#" class="project-link">View Project →</a></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Vuzix M400 Database Application</legend>
+                        <p>Developed a database application for Vuzix M400 smart glasses that scans QR codes on objects to access stored information, and allows users to borrow and return items directly through the AR interface.</p>
+                        <p class="tags"><span>AR</span><span>Vuzix M400</span><span>QR Scanning</span><span>Database</span></p>
+                        <p><a href="#" class="project-link">View Project →</a></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Kenilworth Castle VR Experience</legend>
+                        <p>Recorded and prepared videos of people and environments re-enacting scenes from the 1500s at Kenilworth Castle. Processed the footage for a virtual augmented environment, placing lifelike avatars into an immersive historical reconstruction.</p>
+                        <p class="tags"><span>VR/AR</span><span>Video Processing</span><span>Historical</span><span>3D Environments</span></p>
+                        <p><a href="#" class="project-link">View Project →</a></p>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="win98-window" id="win-blog" data-title="Blog" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">📝 Blog</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p class="lead">Thoughts, tutorials, and insights on VR/XR development and HCI research.</p>
+                    <fieldset>
+                        <legend>Coming Soon</legend>
+                        <p>Blog posts will be added here soon. Stay tuned for articles on VR development, HCI research, and more.</p>
+                        <p><a href="blog/post-1.html">Read the sample post →</a></p>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minesweeper -->
+        <section class="win98-window" id="win-minesweeper" data-title="Minesweeper" hidden>
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">💣 Minesweeper</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" data-act="min"></button>
+                        <button aria-label="Close" data-act="close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div id="ms-hud">
+                        <span id="ms-mines" class="ms-counter">010</span>
+                        <button id="ms-face" title="New game">🙂</button>
+                        <span id="ms-status" class="ms-counter">000</span>
+                    </div>
+                    <div id="ms-board"></div>
+                    <p class="ms-hint">Left-click to reveal · Right-click (or long-press) to flag</p>
+                </div>
+            </div>
+        </section>
+
     </div>
+</main>
 
-    <script src="js/main.js"></script>
+<!-- ==================== START MENU ==================== -->
+<nav id="start-menu" hidden>
+    <div id="start-banner"><span>Arindam<strong>98</strong></span></div>
+    <ul id="start-list">
+        <li><button data-open="about"><span class="ico">🖥️</span> About Me</button></li>
+        <li><button data-open="research"><span class="ico">📁</span> Research</button></li>
+        <li><button data-open="skills"><span class="ico">🧰</span> Skills</button></li>
+        <li><button data-open="education"><span class="ico">🎓</span> Education</button></li>
+        <li><button data-open="projects"><span class="ico">💼</span> Projects</button></li>
+        <li><button data-open="blog"><span class="ico">📝</span> Blog</button></li>
+        <li><button data-open="minesweeper"><span class="ico">💣</span> Minesweeper</button></li>
+        <li class="sep"></li>
+        <li><a href="mailto:arindam.dutta99999@gmail.com"><span class="ico">✉</span> Email</a></li>
+        <li><a href="https://www.linkedin.com/in/arin99/" target="_blank" rel="noopener"><span class="ico">🔗</span> LinkedIn</a></li>
+        <li class="sep"></li>
+        <li><a href="classic.html"><span class="ico">🗔</span> Classic View…</a></li>
+    </ul>
+</nav>
+
+<!-- ==================== TASKBAR ==================== -->
+<footer id="taskbar">
+    <button id="start-button"><span class="flag">⊞</span> Start</button>
+    <div id="taskbar-windows"></div>
+    <div id="tray"><span id="clock">--:--</span></div>
+</footer>
+
+<script src="js/desktop.js"></script>
 </body>
 </html>

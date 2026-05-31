@@ -5,7 +5,21 @@
       "WebFetch(domain:arid99t.github.io)",
       "Bash(git branch:*)",
       "Bash(git push:*)",
-      "Bash(start \"\" \"/e/MyWebpage/index.html\")"
+      "Bash(start \"\" \"/e/MyWebpage/index.html\")",
+      "Bash(curl -sL https://unpkg.com/98.css@0.1.20/dist/98.css -o css/98.css)",
+      "Bash(curl -sL https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif.woff -o css/ms_sans_serif.woff)",
+      "Bash(curl -sL https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif.woff2 -o css/ms_sans_serif.woff2)",
+      "Bash(curl -sL https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif_bold.woff -o css/ms_sans_serif_bold.woff)",
+      "Bash(curl -sL https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif_bold.woff2 -o css/ms_sans_serif_bold.woff2)",
+      "Bash(node --check js/desktop.js)",
+      "Bash(node -e \"const fs=require\\('fs'\\);['index.html','classic.html','css/98.css','css/desktop.css','js/desktop.js','css/ms_sans_serif.woff2','assets/images/profile.jpeg'].forEach\\(f=>console.log\\(\\(fs.existsSync\\(f\\)?'ok  ':'MISS'\\)+f\\)\\)\")",
+      "PowerShell($ErrorActionPreference='SilentlyContinue'; $node=\\(Get-Command node\\).Source; if\\($node\\){ & node --check js/desktop.js; if\\($?\\){'JS-OK'} } else {'no-node'}; foreach\\($f in 'index.html','classic.html','css/98.css','css/desktop.css','js/desktop.js','css/ms_sans_serif.woff2','assets/images/profile.jpeg'\\){ if\\(Test-Path $f\\){\"ok   $f\"}else{\"MISS $f\"} })",
+      "PowerShell($py=\\(Get-Command python\\).Source; if\\(-not $py\\){$py=\\(Get-Command py\\).Source}; $py)",
+      "Bash(python -m http.server 8765 --bind 127.0.0.1)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8765__TRACKED_VAR__)",
+      "Bash(py -m http.server 8765 --bind 127.0.0.1)",
+      "PowerShell(Start-Process \"d:\\\\mywebpage\\\\index.html\")",
+      "PowerShell(\"opened\")"
     ]
   }
 }
