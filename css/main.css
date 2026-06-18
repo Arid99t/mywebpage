@@ -290,7 +290,7 @@ img { max-width: 100%; display: block; }
     background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--accent) 22%, transparent));
     mix-blend-mode: multiply;
 }
-.hero__portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero__portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
 .hero__portrait-badge {
     position: absolute;
     bottom: -14px; left: 50%;
