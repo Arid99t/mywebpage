@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arindam Dutta — XR Software Developer</title>
-    <meta name="description" content="Arindam Dutta (Arin) — XR Software Developer building immersive, spatial applications from research prototype to shipped product. Birmingham, UK.">
+    <title>Arindam Dutta — Haptics &amp; XR Research Engineer</title>
+    <meta name="description" content="Arindam Dutta (Arin) — research engineer working where real-time systems meet human perception. Haptic hardware, XR pipelines and the psychophysics that measure what people actually perceive. Birmingham, UK.">
     <meta name="author" content="Arindam Dutta">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Arindam Dutta — XR Software Developer">
-    <meta property="og:description" content="Immersive, spatial applications from prototype to shipped product. Unity · C++ · XR · Computer Vision · Haptics.">
+    <meta property="og:title" content="Arindam Dutta — Haptics &amp; XR Research Engineer">
+    <meta property="og:description" content="Haptic devices, XR pipelines and perceptual studies. Unity · C++ · ESP32 · DAQ · psychophysics.">
     <meta property="og:type" content="website">
 
     <!-- Favicon (inline monogram) -->
@@ -34,6 +34,7 @@
         <nav class="nav__links" id="navLinks" aria-label="Primary">
             <a href="#about" class="nav__link"><span class="slash">//</span> about</a>
             <a href="#expertise" class="nav__link"><span class="slash">//</span> expertise</a>
+            <a href="#research" class="nav__link"><span class="slash">//</span> research</a>
             <a href="#work" class="nav__link"><span class="slash">//</span> work</a>
             <a href="#experience" class="nav__link"><span class="slash">//</span> experience</a>
             <a href="#contact" class="nav__link"><span class="slash">//</span> contact</a>
@@ -57,15 +58,16 @@
     <section class="hero" id="hero">
         <div class="hero__inner">
             <div class="hero__text">
-                <p class="kicker reveal"><span class="slash">//</span> Portfolio — Birmingham, UK</p>
+                <p class="kicker reveal"><span class="slash">//</span> Research engineer — Birmingham, UK</p>
                 <h1 class="hero__name reveal">Arindam Dutta <span class="hero__alias">(Arin)</span></h1>
-                <p class="hero__role reveal">XR Software Developer</p>
-                <p class="hero__tag reveal">I take immersive, spatial applications across the full lifecycle —
-                    from <span class="hl">research prototype</span> to <span class="hl">shipped product</span>.</p>
+                <p class="hero__role reveal">Haptics &amp; XR Research Engineer</p>
+                <p class="hero__tag reveal">I build the <span class="hl">hardware and software</span> for immersive
+                    experiments — then run the studies that show what people
+                    <span class="hl">actually perceive</span>.</p>
 
                 <div class="hero__cta reveal">
                     <a href="#work" class="btn btn--primary">View my work</a>
-                    <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                    <a href="#research" class="btn btn--ghost">Read the research</a>
                 </div>
 
                 <div class="hero__social reveal">
@@ -79,7 +81,7 @@
                 <div class="hero__portrait-frame">
                     <img src="assets/images/profile.jpeg" alt="Arindam Dutta" loading="eager">
                 </div>
-                <span class="hero__portrait-badge"><span class="slash">//</span> available for XR roles</span>
+                <span class="hero__portrait-badge"><span class="slash">//</span> haptics · XR · real-time systems</span>
             </div>
         </div>
 
@@ -91,19 +93,19 @@
         <div class="container">
             <p class="label reveal"><span class="slash">//</span> 01 — about</p>
             <h2 class="about__statement reveal">
-                I build immersive systems in Unity, computer-vision pipelines, and custom haptic hardware —
-                grounded in an <span class="hl">HCI background</span> focused on interaction design and structured
-                user evaluation.
+                I work where real-time systems meet human perception — and what a system delivers is
+                <span class="hl">rarely what it thinks it is delivering</span>.
             </h2>
             <div class="about__cols">
-                <p class="reveal">I've deployed to Meta Quest, Apple Vision Pro and Valve Index, shipped a consumer
-                    AR app to the App Store and Google Play, and contributed to multiple research projects across XR
-                    and haptics. My foundation is in C++ and C#, with multi-platform Unity development, real-time
-                    rendering optimisation, and low-latency 3D interactive systems.</p>
-                <p class="reveal">An MSc in Human-Computer Interaction grounds this work in interaction design and
-                    statistical evaluation. I'm particularly drawn to <span class="hl">XR applied to the built
-                    environment</span> — using real-time visualisation and spatial interaction to change how physical
-                    spaces are designed, understood and experienced.</p>
+                <p class="reveal">My work runs as a loop. Design an apparatus — voice-coil actuators, stepper-driven
+                    linear stages, ESP32 firmware, an NI DAQ — drive it from Unity under deterministic sub-frame timing,
+                    then run controlled psychophysics against it: 2AFC sessions, PSE and JND estimates, detection
+                    thresholds, with 16 to 64 participants per study. The engineering and the measurement are the same
+                    job.</p>
+                <p class="reveal">A physics BSc gives me the signal-processing and modelling side; an
+                    <span class="hl">MSc in Human-Computer Interaction</span> gives me experimental design, statistics
+                    and ethics protocols. I've deployed to Meta Quest 1/2/3, Apple Vision Pro, Valve Index and iPad, and
+                    shipped a consumer AR app to the App Store and Google Play.</p>
             </div>
         </div>
     </section>
@@ -119,38 +121,122 @@
             <div class="expertise__grid">
                 <article class="card card--expertise reveal">
                     <span class="card__num">01</span>
-                    <h3>XR &amp; Real-Time</h3>
-                    <p>Multi-platform Unity (C#) development, OpenXR &amp; XR Interaction Toolkit, real-time rendering
-                        and pipeline optimisation, 3D spatial math &amp; physics.</p>
+                    <h3>Haptics &amp; Actuation</h3>
+                    <p>Voice-coil actuators and force-sensitive resistors driven over an NI USB-6343 DAQ; stepper-driven
+                        dual linear stages rendering object widths from 3.5 to 90&nbsp;cm; real-time tactile signal
+                        synthesis and streaming.</p>
+                    <ul class="chips">
+                        <li>Voice coils</li><li>Syntacts</li><li>NI USB-6343</li><li>Stepper stages</li><li>FSR</li><li>DSP</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise reveal">
+                    <span class="card__num">02</span>
+                    <h3>XR Development</h3>
+                    <p>Multi-platform Unity (C#) with OpenXR and the Meta XR Interaction SDK, hand tracking and hand
+                        redirection pipelines, and rendering-path profiling to hold frame rate under load.</p>
                     <ul class="chips">
                         <li>Unity</li><li>OpenXR</li><li>Meta Quest 1/2/3</li><li>Vision Pro</li><li>Valve Index</li><li>Unreal</li>
                     </ul>
                 </article>
 
                 <article class="card card--expertise reveal">
-                    <span class="card__num">02</span>
-                    <h3>Software &amp; Systems</h3>
-                    <p>Strong C++ foundation (OOP, STL, memory management, design patterns) and low-latency real-time
-                        systems, DSP concepts and audio/haptic feedback loops.</p>
+                    <span class="card__num">03</span>
+                    <h3>Perceptual Evaluation</h3>
+                    <p>Full-cycle user studies: protocol design, ethics approval, recruitment, within-subjects 2AFC
+                        sessions, psychometric model fitting and manuscript writing. Studies of 16 to 64 participants.</p>
                     <ul class="chips">
-                        <li>C++</li><li>C#</li><li>Python</li><li>Swift</li><li>C</li><li>R</li>
+                        <li>2AFC</li><li>PSE / JND</li><li>Detection thresholds</li><li>Python</li><li>R</li>
                     </ul>
                 </article>
 
                 <article class="card card--expertise reveal">
-                    <span class="card__num">03</span>
-                    <h3>Hardware &amp; Vision</h3>
-                    <p>ESP32 / Arduino firmware with precise PWM tactile signals and serial comms, paired with
-                        computer-vision pipelines and CUDA-accelerated inference.</p>
+                    <span class="card__num">04</span>
+                    <h3>Real-Time &amp; Distributed Systems</h3>
+                    <p>Adaptive synchronisation under variable transport delay, real-time control loops, deterministic
+                        serial and DAQ pipelines, and latency and frame-rate profiling of interactive applications.</p>
                     <ul class="chips">
-                        <li>ESP32</li><li>Arduino</li><li>OpenCV</li><li>PyTorch</li><li>TensorFlow</li><li>SAM 2</li>
+                        <li>C++</li><li>Swift</li><li>ESP32 / Teensy</li><li>Serial</li><li>Latency profiling</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise reveal">
+                    <span class="card__num">05</span>
+                    <h3>Machine Learning &amp; Vision</h3>
+                    <p>Sequence modelling with CRNN and CTC decoding over continuous video with temporal stability
+                        gating; SAM&nbsp;2 video segmentation with CUDA-accelerated multi-GPU inference.</p>
+                    <ul class="chips">
+                        <li>PyTorch</li><li>OpenCV</li><li>CRNN + CTC</li><li>SAM 2</li><li>CUDA</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise reveal">
+                    <span class="card__num">06</span>
+                    <h3>Prototyping &amp; Tooling</h3>
+                    <p>Mechanical design and 3D printing for custom rigs and enclosures, with the software toolchain to
+                        keep it all reproducible.</p>
+                    <ul class="chips">
+                        <li>SolidWorks</li><li>Fusion 360</li><li>Blender</li><li>Git / Actions</li><li>CMake</li>
                     </ul>
                 </article>
             </div>
 
             <blockquote class="quote reveal">
-                <p>“The full lifecycle — from a rough rig on a desk to a product live on the App Store.”</p>
+                <p>“A haptic system doesn't deliver what it renders — it delivers what the person notices.”</p>
             </blockquote>
+        </div>
+    </section>
+
+    <!-- ==================== RESEARCH ==================== -->
+    <section class="section research" id="research">
+        <div class="container">
+            <div class="section__head reveal">
+                <p class="label"><span class="slash">//</span> 03 — research</p>
+                <h2 class="section__title">Manuscripts in preparation</h2>
+            </div>
+
+            <ol class="pubs">
+                <li class="pub reveal">
+                    <span class="pub__num">01</span>
+                    <div class="pub__body">
+                        <p class="pub__authors">Y. Lin, E. Ofek, <strong>A. Dutta</strong>, M. Di Luca</p>
+                        <h3 class="pub__title">Resized Bimanual Grasping in VR: Characterizing Object Size
+                            Discrimination in Bimanual Interaction</h3>
+                        <p class="pub__desc">Two controlled studies (16 participants each) measuring PSE, JND and
+                            detection thresholds for visuo-haptic size scaling during two-handed grasping, run on a
+                            custom dual linear-stage haptic apparatus.</p>
+                        <ul class="chips"><li>Psychophysics</li><li>Bimanual haptics</li><li>Unity</li></ul>
+                    </div>
+                    <span class="pub__status">Complete · submitting to IEEE VR 2027</span>
+                </li>
+
+                <li class="pub reveal">
+                    <span class="pub__num">02</span>
+                    <div class="pub__body">
+                        <p class="pub__authors"><strong>A. Dutta</strong>, E. Ofek, M. Di Luca</p>
+                        <h3 class="pub__title">Sustainability of False Mental Models Against Contradicting Haptic
+                            Cues</h3>
+                        <p class="pub__desc">A behavioural study of how long a visually established haptic
+                            interpretation is retained once visual cues are degraded or removed, and how brief visual
+                            re-exposure restores it — tested across two haptic rendering systems with 64 participants.</p>
+                        <ul class="chips"><li>Mental models</li><li>Visuo-haptic conflict</li><li>Quest 3</li></ul>
+                    </div>
+                    <span class="pub__status">In preparation · CHI 2027</span>
+                </li>
+
+                <li class="pub reveal">
+                    <span class="pub__num">03</span>
+                    <div class="pub__body">
+                        <p class="pub__authors"><strong>A. Dutta</strong> et al.</p>
+                        <h3 class="pub__title">Detection Thresholds for Visually Distorted Haptic Objects in
+                            Pseudo-Bimanual Interaction</h3>
+                        <p class="pub__desc">Measuring how far a haptically rendered object can be visually twisted,
+                            squeezed or deformed before users detect the discrepancy.</p>
+                        <ul class="chips"><li>Detection thresholds</li><li>Hand redirection</li><li>Unity</li></ul>
+                    </div>
+                    <span class="pub__status">User study in progress</span>
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -158,26 +244,27 @@
     <section class="section work" id="work">
         <div class="container">
             <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 03 — work</p>
+                <p class="label"><span class="slash">//</span> 04 — work</p>
                 <h2 class="section__title">Selected projects</h2>
             </div>
 
             <!-- Featured -->
             <article class="featured reveal">
-                <div class="featured__media" data-cover="kenilworth">
-                    <span class="featured__store">● Live on App Store &amp; Google Play</span>
-                    <span class="cover__mono">KR</span>
+                <div class="featured__media" data-cover="rig">
+                    <span class="featured__store">● Research apparatus · in active use</span>
+                    <span class="cover__mono">⇔</span>
                 </div>
                 <div class="featured__body">
-                    <p class="label"><span class="slash">//</span> shipped product</p>
-                    <h3>Kenilworth Revealed</h3>
-                    <p class="featured__meta">Avatar pipeline &amp; filming · 2025–2026 · with Zubr / MyJams</p>
-                    <p>A consumer AR mobile app for a heritage initiative led by Kenilworth Town Council, released
-                        publicly on iOS and Android. I built the avatar-creation pipeline — turning video footage into
-                        in-app avatars with no greenscreen — using SAM 2 for video segmentation and background removal,
-                        running CUDA-accelerated inference across two GPUs on high-resolution video.</p>
+                    <p class="label"><span class="slash">//</span> haptics · hardware + studies</p>
+                    <h3>Dual Linear-Stage Haptic Apparatus</h3>
+                    <p class="featured__meta">Design, firmware, Unity integration &amp; studies · VR Lab, Univ. of Birmingham</p>
+                    <p>A robotic bimanual haptic rig that physically renders object widths from 3.5 to 90&nbsp;cm:
+                        stepper-driven linear stages under ESP32-S3 firmware, integrated with Unity over a deterministic
+                        serial link so physical actuation and rendered visuals stay locked sub-frame. Built to answer a
+                        perceptual question — how far the virtual size of a grasped object can drift from the physical
+                        proxy before anyone notices — and used for the studies behind two manuscripts.</p>
                     <ul class="chips">
-                        <li>Unity</li><li>C#</li><li>Python</li><li>SAM 2</li><li>CUDA</li>
+                        <li>ESP32-S3</li><li>Stepper motors</li><li>Unity</li><li>C#</li><li>Serial</li><li>Psychophysics</li>
                     </ul>
                 </div>
             </article>
@@ -185,109 +272,107 @@
             <!-- Filters -->
             <div class="filters reveal" id="filters">
                 <button class="filter is-active" data-filter="all">All</button>
+                <button class="filter" data-filter="haptics">Haptics</button>
+                <button class="filter" data-filter="xr">XR</button>
+                <button class="filter" data-filter="systems">Systems &amp; ML</button>
                 <button class="filter" data-filter="shipped">Shipped</button>
-                <button class="filter" data-filter="research">Research</button>
             </div>
 
             <!-- Grid -->
             <div class="work__grid" id="workGrid">
 
-                <!-- ARME -->
-                <article class="card card--project reveal" data-cat="shipped">
+                <!-- Haptic rendering device -->
+                <article class="card card--project reveal" data-cat="haptics systems">
+                    <div class="card__cover" data-cover="haptics"><span class="cover__mono">≈</span></div>
+                    <div class="card__body">
+                        <p class="label"><span class="slash">//</span> haptics · C++ / Syntacts</p>
+                        <h3>Haptic Feedback &amp; Tactile Rendering Device</h3>
+                        <p>A real-time haptic rendering controller in C++ built on the Syntacts framework, synthesising,
+                            sequencing and streaming high-fidelity tactile signals to voice-coil actuators. Arduino
+                            firmware captures high-frequency analog sensor data over serial, and real-time signal
+                            mapping turns physical input into proportional actuator modulation. Custom enclosure
+                            designed and 3D-printed.</p>
+                        <ul class="chips"><li>C++</li><li>Syntacts</li><li>Arduino</li><li>NI DAQ</li><li>Fusion 360</li></ul>
+                    </div>
+                </article>
+
+                <!-- Hand redirection -->
+                <article class="card card--project reveal" data-cat="haptics xr">
+                    <div class="card__cover" data-cover="hand"><span class="cover__mono">✋</span></div>
+                    <div class="card__body">
+                        <p class="label"><span class="slash">//</span> research · Meta Quest</p>
+                        <h3>Hand Redirection Pipeline</h3>
+                        <p>A sensorimotor prediction pipeline injected into Meta Quest hand tracking. It continuously
+                            transforms the streamed pose time series to displace the rendered hand from the physical
+                            hand — staying below the detection threshold, so a single physical proxy can stand in for
+                            many virtual objects.</p>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>Meta XR SDK</li><li>Hand tracking</li></ul>
+                        <div class="card__links">
+                            <a href="https://github.com/Arid99t/DataHandRotation" target="_blank" rel="noopener">GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AMUSER -->
+                <article class="card card--project reveal" data-cat="xr systems shipped">
                     <div class="card__cover" data-cover="arme"><span class="cover__mono">♪</span></div>
                     <div class="card__body">
-                        <p class="label"><span class="slash">//</span> shipped · Swift</p>
-                        <h3>ARME — AMUSER App</h3>
-                        <p>An iPad app that keeps distributed musicians in sync in real time. I built the tempo-tracking
-                            and beat-correction engine — compiled as a C++ library and wired into Swift — that nudges
-                            each player's playback on every beat so the ensemble stays locked together.</p>
-                        <ul class="chips"><li>Swift</li><li>C++</li><li>iOS</li><li>Real-time DSP</li></ul>
+                        <p class="label"><span class="slash">//</span> shipped · Swift / visionOS</p>
+                        <h3>AMUSER — Distributed Real-Time Sync</h3>
+                        <p>An adaptive tempo-sync engine (Swift with a C++ core) that keeps geographically distributed
+                            musicians synchronised in real time under variable transport delay, predicting and
+                            compensating for timing drift on a continuous stream. Shipped on iPad, with an immersive
+                            mixed-reality version on Apple Vision Pro running the same loop under head-tracked
+                            rendering constraints.</p>
+                        <ul class="chips"><li>Swift</li><li>C++</li><li>visionOS</li><li>Real-time DSP</li></ul>
                         <div class="card__links">
                             <a href="https://github.com/arme-project/AMUSER" target="_blank" rel="noopener">GitHub ↗</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 100 Metronome -->
-                <article class="card card--project reveal" data-cat="shipped">
-                    <div class="card__cover" data-cover="metronome"><span class="cover__mono">100</span></div>
+                <!-- Kenilworth Revealed -->
+                <article class="card card--project reveal" data-cat="xr systems shipped">
+                    <div class="card__cover" data-cover="kenilworth"><span class="cover__mono">KR</span></div>
                     <div class="card__body">
-                        <p class="label"><span class="slash">//</span> showcase · Unity</p>
-                        <h3>100-Metronome Project</h3>
-                        <p>A Unity showcase for ARME: 100 on-screen metronomes that lock to the user in real time. Built
-                            on the ARME onset-prediction model, detecting hand claps and taps and driving all 100
-                            metronomes to the user's tempo simultaneously.</p>
-                        <ul class="chips"><li>C#</li><li>Unity</li><li>Onset detection</li></ul>
-                        <div class="card__links">
-                            <a href="https://github.com/Arid99t/100-Metronomes" target="_blank" rel="noopener">GitHub ↗</a>
-                            <span class="card__note">branch: Arin2_OnsetDetection</span>
-                        </div>
+                        <p class="label"><span class="slash">//</span> shipped · iOS &amp; Android</p>
+                        <h3>Kenilworth Revealed — AR Avatars</h3>
+                        <p>A consumer AR heritage app for Kenilworth Town Council, released publicly on iOS and Android.
+                            I engineered the avatar-creation pipeline — turning video footage into in-app avatars with
+                            no greenscreen — using SAM&nbsp;2 video segmentation with CUDA-accelerated multi-GPU
+                            inference on high-resolution footage.</p>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>Python</li><li>SAM 2</li><li>CUDA</li></ul>
                     </div>
                 </article>
 
                 <!-- VR Chemistry Lab -->
-                <article class="card card--project reveal" data-cat="shipped">
+                <article class="card card--project reveal" data-cat="xr shipped">
                     <div class="card__cover" data-cover="chem"><span class="cover__mono">⚗</span></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> production · Unity</p>
                         <h3>VR Chemistry Lab</h3>
-                        <p>A production VR chemistry-lab simulation for first-year undergraduate teaching, taken from
-                            prototype to deployment in three months. Architected a modular C# system supporting four
-                            experiment types; signed off by educators and deployed to a student cohort on schedule.</p>
-                        <ul class="chips"><li>Unity</li><li>C#</li><li>Education XR</li></ul>
+                        <p>Four interactive VR simulation modules taken from prototype to production rollout for a
+                            first-year student cohort. I architected a modular, reusable C# system and profiled the
+                            rendering path to hold stable frame rates and low-latency interaction under load.</p>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>Rendering</li><li>Education XR</li></ul>
                         <div class="card__links">
                             <a href="https://github.com/Arid99t/CTLVR-FumeCupboard" target="_blank" rel="noopener">GitHub ↗</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- VR Haptics Research -->
-                <article class="card card--project reveal" data-cat="research">
-                    <div class="card__cover" data-cover="haptics"><span class="cover__mono">✋</span></div>
-                    <div class="card__body">
-                        <p class="label"><span class="slash">//</span> research · ISMAR 2026</p>
-                        <h3>VR Haptics Perception</h3>
-                        <p>Two strands of controlled VR studies. <strong>Resized bimanual grasping:</strong> a single
-                            rigid proxy can represent virtual widths from ~0.57× to 2.02× its physical size undetected.
-                            <strong>Haptic memory:</strong> a voice-coil + FSR cube measuring how a haptic illusion
-                            decays ~60–70s after visuals are removed.</p>
-                        <ul class="chips"><li>Unity</li><li>C#</li><li>ESP32</li><li>Quest 3</li></ul>
-                        <div class="card__links">
-                            <a href="https://drive.google.com/file/d/1J-fKUumHBVGODMLuaGuU98DDR0qnaZv/view" target="_blank" rel="noopener">Paper ↗</a>
-                            <a href="https://github.com/Arid99t/DataHandRotation" target="_blank" rel="noopener">GitHub ↗</a>
-                        </div>
-                    </div>
-                </article>
-
                 <!-- Real-Time CV Pipeline -->
-                <article class="card card--project reveal" data-cat="research">
+                <article class="card card--project reveal" data-cat="systems">
                     <div class="card__cover" data-cover="vision"><span class="cover__mono">⌬</span></div>
                     <div class="card__body">
-                        <p class="label"><span class="slash">//</span> research · self-directed</p>
-                        <h3>Real-Time Computer Vision Pipeline</h3>
-                        <p>An end-to-end prototype that recognises handwritten chemical formulas from a live feed
-                            (OpenCV pre-processing → PyTorch CRNN with CTC decoding → stability gating) and overlays the
-                            balanced reaction in AR when two formulas meet. Shipped as a desktop client and a
-                            browser-based phone client over FastAPI.</p>
+                        <p class="label"><span class="slash">//</span> self-directed · C++ / Python</p>
+                        <h3>Real-Time Computer Vision &amp; Tracking Pipeline</h3>
+                        <p>An end-to-end live-video recognition system: OpenCV pre-processing into a PyTorch CRNN with
+                            CTC decoding and temporal stability gating across frames, demonstrated on handwritten
+                            chemical formulas and overlaying the balanced reaction in AR.</p>
                         <ul class="chips"><li>Python</li><li>OpenCV</li><li>PyTorch</li><li>Unity AR</li></ul>
                         <div class="card__links">
                             <a href="https://github.com/Arid99t/Chem_Vision" target="_blank" rel="noopener">GitHub ↗</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Vuzix M500 -->
-                <article class="card card--project reveal" data-cat="research">
-                    <div class="card__cover" data-cover="vuzix"><span class="cover__mono">◉</span></div>
-                    <div class="card__body">
-                        <p class="label"><span class="slash">//</span> research · in progress</p>
-                        <h3>Vuzix M500 — Edge Detection</h3>
-                        <p>Benchmarking the Vuzix M500 AR glasses and working toward running a CNN image-detection model
-                            directly on-device. Built and installed custom apps to test the device's computational
-                            limits and runtime endurance; next step is an on-device CNN for real-time detection.</p>
-                        <ul class="chips"><li>C++</li><li>Python</li><li>Vuzix SDK</li></ul>
-                        <div class="card__links">
-                            <span class="card__note">2026 — present</span>
                         </div>
                     </div>
                 </article>
@@ -300,7 +385,7 @@
     <section class="section experience" id="experience">
         <div class="container">
             <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 04 — experience</p>
+                <p class="label"><span class="slash">//</span> 05 — experience</p>
                 <h2 class="section__title">Where I've worked</h2>
             </div>
 
@@ -310,21 +395,40 @@
                     <div class="timeline__body">
                         <h3>Research Associate <span class="timeline__at">— VR Lab, University of Birmingham</span></h3>
                         <p class="timeline__place">Birmingham, UK</p>
-                        <p>Running controlled VR perception studies on custom robotic haptic rigs, engineering physical
-                            haptic devices, building the AMUSER tempo-sync app, and authoring low-level ESP32 firmware.
-                            Coordinated the cross-institutional BhamXR seminar programme (8 events, 30+ researchers).</p>
-                        <ul class="chips"><li>Unity</li><li>C#</li><li>C++</li><li>Swift</li><li>ESP32</li><li>VR/XR</li></ul>
+                        <ul class="bullets">
+                            <li><strong>Real-time distributed synchronisation.</strong> Designed and implemented the
+                                AMUSER adaptive tempo-sync algorithm (Swift, C++ core), shipped on iPad and Apple Vision
+                                Pro.</li>
+                            <li><strong>Latency-critical control loops and instrumentation.</strong> Built a voice-coil
+                                and FSR device with real-time signal generation and capture over an NI USB-6343 DAQ, and
+                                a dual linear-stage robotic apparatus (stepper motors, ESP32-S3 firmware, Unity over
+                                serial) — both requiring deterministic sub-frame timing between actuation and visuals.</li>
+                            <li><strong>Perceptual tolerance measurement.</strong> Ran three studies (16, 16 and 64
+                                participants) quantifying detection thresholds for visual-haptic discrepancy, covering
+                                protocol design, ethics compliance, recruitment, 2AFC sessions, psychometric fitting and
+                                manuscript writing.</li>
+                            <li><strong>Sensorimotor prediction pipelines.</strong> Implemented a hand redirection
+                                pipeline injected into Meta Quest hand tracking, displacing the rendered hand from the
+                                physical hand below the detection threshold.</li>
+                            <li>Coordinated the cross-institutional BhamXR seminar series — 8 events, 30+ researchers
+                                across UK XR groups.</li>
+                        </ul>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>C++</li><li>Swift</li><li>ESP32</li><li>NI DAQ</li><li>Psychophysics</li></ul>
                     </div>
                 </article>
 
                 <article class="timeline__item reveal">
                     <div class="timeline__when">Jul 2024 — Sep 2024</div>
                     <div class="timeline__body">
-                        <h3>VR Software Developer &amp; Researcher <span class="timeline__at">— Univ. of Birmingham (CTL EdTech)</span></h3>
+                        <h3>VR Software Developer <span class="timeline__at">— Univ. of Birmingham (CTL EdTech)</span></h3>
                         <p class="timeline__place">Birmingham, UK</p>
-                        <p>Engineered and shipped 4 interactive VR simulation modules in Unity, from prototype to a
-                            production rollout signed off for a first-year cohort. Profiled and optimised rendering
-                            pipelines, and translated academic requirements into modular, reusable C# architecture.</p>
+                        <ul class="bullets">
+                            <li>Shipped 4 interactive VR simulation modules in Unity, from prototype to production
+                                rollout for a first-year student cohort.</li>
+                            <li>Profiled and optimised the rendering path to hold stable frame rates and low-latency
+                                interaction under load, and translated stakeholder requirements into modular, reusable
+                                C# architecture.</li>
+                        </ul>
                         <ul class="chips"><li>Unity</li><li>C#</li><li>Rendering</li><li>Education XR</li></ul>
                     </div>
                 </article>
@@ -334,22 +438,11 @@
                     <div class="timeline__body">
                         <h3>Technology Intern <span class="timeline__at">— Bright Network IEUK 2024</span></h3>
                         <p class="timeline__place">United Kingdom — Remote</p>
-                        <p>Analysed user-feedback datasets in Python to surface technical pain points and performance
-                            bottlenecks, and developed a prioritised 6-month feature roadmap aligning technical
-                            feasibility with product objectives.</p>
+                        <ul class="bullets">
+                            <li>Analysed user-feedback datasets in Python to identify technical pain points, and
+                                produced a prioritised 6-month feature roadmap.</li>
+                        </ul>
                         <ul class="chips"><li>Python</li><li>Data analysis</li><li>Product</li></ul>
-                    </div>
-                </article>
-
-                <article class="timeline__item reveal">
-                    <div class="timeline__when">Jun 2022 — Dec 2022</div>
-                    <div class="timeline__body">
-                        <h3>UI/UX Developer &amp; Designer Intern <span class="timeline__at">— Insusty</span></h3>
-                        <p class="timeline__place">Trets, France — Remote</p>
-                        <p>Built responsive front-end interfaces with JavaScript, HTML and CSS, incorporating WCAG
-                            accessibility guidelines and cross-browser compatibility, and ran structured testing
-                            sessions to turn user behaviour into actionable UI improvements.</p>
-                        <ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>WCAG</li><li>Figma</li></ul>
                     </div>
                 </article>
             </div>
@@ -361,24 +454,22 @@
                     <div class="edu__item">
                         <h4>MSc Human-Computer Interaction</h4>
                         <p class="edu__meta">University of Birmingham, UK · 2023–2024</p>
-                        <p class="edu__mods">Machine Learning · HCI Theory &amp; Practice · Experimental Design,
-                            Evaluation Methods &amp; Statistics · Intelligent Interactive Systems · Mobile &amp;
-                            Ubiquitous Computing</p>
+                        <p class="edu__mods">Experimental Design, Evaluation Methods &amp; Statistics · Machine
+                            Learning · Intelligent Interactive Systems · HCI Theory &amp; Practice</p>
                     </div>
                     <div class="edu__item">
                         <h4>BSc Physics</h4>
                         <p class="edu__meta">Cotton University, Assam, India · 2017–2020</p>
                         <p class="edu__mods">Waves &amp; Optics (Fourier analysis, wave equations) · Quantum &amp;
-                            Classical Mechanics · Matrices &amp; Tensors · Thermodynamics &amp; Statistical Physics</p>
+                            Classical Mechanics · Thermodynamics &amp; Statistical Physics · Matrices &amp; Tensors</p>
                     </div>
                 </div>
                 <div class="edu__col reveal">
                     <p class="label"><span class="slash">//</span> certificates</p>
                     <ul class="edu__certs">
-                        <li>Computer Vision Bootcamp with PyTorch &amp; TensorFlow <span>Udemy · 2026</span></li>
-                        <li>Comprehensive Software Development Using C++ <span>Udemy · 2026</span></li>
-                        <li>UX Research Methods <span>Udemy · 2026</span></li>
-                        <li>Unity VR/XR Developer <span>Udemy · 2024</span></li>
+                        <li>Computer Vision with PyTorch &amp; TensorFlow <span>2026</span></li>
+                        <li>Software Development in C++ <span>2026</span></li>
+                        <li>Unity VR/XR Developer <span>2024</span></li>
                     </ul>
                 </div>
             </div>
@@ -388,11 +479,11 @@
     <!-- ==================== CONTACT ==================== -->
     <section class="section contact" id="contact">
         <div class="container">
-            <p class="label reveal"><span class="slash">//</span> 05 — contact</p>
-            <h2 class="contact__title reveal">Let's build something <span class="hl">spatial</span>.</h2>
-            <p class="contact__lead reveal">I'm looking for an XR development role where I can take immersive
-                applications from prototype to production — across disciplines and devices. If that sounds like your
-                team, I'd love to talk.</p>
+            <p class="label reveal"><span class="slash">//</span> 06 — contact</p>
+            <h2 class="contact__title reveal">Let's build something you can <span class="hl">feel</span>.</h2>
+            <p class="contact__lead reveal">I'm looking for research-engineering work in haptics and XR — the kind
+                where the device, the real-time software and the perceptual study are all part of the same problem. If
+                that sounds like your team, I'd love to talk.</p>
             <a href="mailto:arindam.dutta99999@gmail.com" class="contact__email reveal">arindam.dutta99999@gmail.com</a>
             <div class="contact__links reveal">
                 <a href="https://github.com/Arid99t" target="_blank" rel="noopener">GitHub ↗</a>
