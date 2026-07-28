@@ -385,6 +385,52 @@ img { max-width: 100%; display: block; }
 }
 
 /* =====================================================================
+   RESEARCH / PUBLICATIONS
+   ===================================================================== */
+.pubs { list-style: none; border-top: 1px solid var(--border); }
+.pub {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px 26px;
+    align-items: start;
+    padding: clamp(26px, 3.4vw, 36px) 0;
+    border-bottom: 1px solid var(--border);
+}
+.pub__num {
+    font-family: var(--font-mono);
+    font-size: .8rem;
+    color: var(--accent);
+    padding-top: .3rem;
+}
+.pub__authors {
+    font-family: var(--font-mono);
+    font-size: .76rem;
+    color: var(--text-faint);
+    margin-bottom: .45rem;
+}
+.pub__authors strong { color: var(--text); font-weight: 600; }
+.pub__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -.01em;
+    margin-bottom: .7rem;
+    max-width: 46ch;
+}
+.pub__desc { color: var(--text-dim); font-size: .94rem; max-width: 68ch; margin-bottom: 1.1rem; }
+.pub__status {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    color: var(--text-dim);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 5px 13px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+/* =====================================================================
    WORK
    ===================================================================== */
 /* Cover graphics (no external images needed) */
@@ -427,7 +473,8 @@ img { max-width: 100%; display: block; }
 [data-cover="chem"]       { --cover: linear-gradient(135deg, #2f6b4f, #0f2a1f); }
 [data-cover="haptics"]    { --cover: linear-gradient(135deg, #5a4b8a, #211a3a); }
 [data-cover="vision"]     { --cover: linear-gradient(135deg, #2b5f7a, #0f2733); }
-[data-cover="vuzix"]      { --cover: linear-gradient(135deg, #5a5f66, #1c2126); }
+[data-cover="rig"]        { --cover: linear-gradient(135deg, #7a4a5f, #241722); }
+[data-cover="hand"]       { --cover: linear-gradient(135deg, #4a5f8a, #16203a); }
 
 /* Featured */
 .featured {
@@ -546,6 +593,24 @@ img { max-width: 100%; display: block; }
 .timeline__place { font-family: var(--font-mono); font-size: .76rem; color: var(--text-faint); margin: .2rem 0 .8rem; }
 .timeline__body > p { color: var(--text-dim); font-size: .95rem; margin-bottom: 1rem; max-width: 70ch; }
 
+.bullets { list-style: none; margin-bottom: 1.1rem; max-width: 74ch; }
+.bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: .55rem;
+    color: var(--text-dim);
+    font-size: .94rem;
+}
+.bullets li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: .8rem;
+    line-height: 1.9;
+}
+.bullets strong { color: var(--text); font-weight: 600; }
+
 /* Education */
 .edu {
     display: grid;
@@ -642,6 +707,8 @@ img { max-width: 100%; display: block; }
     .hero__tag { max-width: none; }
     .about__cols { grid-template-columns: 1fr; gap: 22px; margin-left: 0; }
     .expertise__grid { grid-template-columns: 1fr; }
+    .pub { grid-template-columns: auto 1fr; }
+    .pub__status { grid-column: 2; justify-self: start; }
     .featured { grid-template-columns: 1fr; }
     .featured__media { min-height: 220px; }
     .work__grid { grid-template-columns: 1fr; }

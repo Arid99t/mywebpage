@@ -70,7 +70,8 @@
 
             const cat = btn.getAttribute('data-filter');
             cards.forEach(function (card) {
-                const show = cat === 'all' || card.getAttribute('data-cat') === cat;
+                const cats = (card.getAttribute('data-cat') || '').split(/\s+/);
+                const show = cat === 'all' || cats.indexOf(cat) !== -1;
                 card.classList.toggle('is-hidden', !show);
             });
         });
