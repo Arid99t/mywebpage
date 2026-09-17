@@ -1,137 +1,32 @@
-# Research Website
+﻿# Arindam Dutta — Research portfolio
 
-A modern, aesthetic punk-style research website to showcase your projects, videos, pictures, and blog posts.
+A static personal portfolio with a Monet-inspired visual design, warm ivory and sage light mode, and a deep green dark mode. Existing research, project, experience, education and contact content is retained, with additional emphasis on audio, haptics and hardware.
 
-## Folder Structure
+## Preview
 
-```
-MyWebpage/
-├── index.html              # Main homepage
-├── css/
-│   ├── styles.css          # Main stylesheet with punk aesthetic
-│   └── blog-post.css       # Blog post specific styles
-├── js/
-│   └── main.js             # JavaScript for interactivity
-├── assets/
-│   ├── images/             # Store your images here
-│   └── videos/             # Store your videos here
-├── projects/               # Additional project files
-├── blog/                   # Blog post HTML files
-│   └── post-1.html         # Example blog post template
-└── README.md               # This file
-```
+Open `index.html` in a browser. No installation or build is required. The site can also be served with any static HTTP server or hosted on GitHub Pages.
 
-## How to Add Your Content
+## Main files
 
-### 1. Adding Your Name and Info
-- Open `index.html`
-- Replace "YOUR.NAME" in the navigation (line 19)
-- Replace "Your Name Here" in the About section (line 171)
-- Update the footer copyright (line 186)
-- Add your social media links (lines 188-191)
+- `index.html` — content, navigation, discipline links and project categories.
+- `css/main.css` — theme tokens, typography, layout and responsive styles.
+- `js/main.js` — saved colour preference, mobile navigation and project filtering.
+- `assets/images/profile.jpeg` — original portrait.
+- `assets/images/water-lilies.jpg` — optimised decorative artwork.
+- `assets/images/water-lilies-source.md` — artwork provenance and generation prompt.
 
-### 2. Adding Project Images
-- Add your project images to `assets/images/`
-- Name them: `project-1.jpg`, `project-2.jpg`, etc.
-- Update image paths in `index.html` (lines 56, 77, 98)
-- Update the `alt` attributes with descriptive text
+The older `classic.html`, blog pages and design-system folder remain separate from this homepage.
 
-### 3. Adding Project Videos
-- Add your project videos to `assets/videos/`
-- Name them: `project-video-1.mp4`, `project-video-2.mp4`, etc.
-- Videos will display in the project modal when users click "View Details"
+## Design and behaviour
 
-### 4. Updating Project Details
-- Edit project information in `index.html` (lines 49-110)
-- Edit project data in `js/main.js` (lines 43-77)
-- Update titles, descriptions, and tags for each project
+- Libre Caslon Display headings and DM Sans body type, loaded from Google Fonts with local font fallbacks.
+- System colour preference is respected initially. The header toggle saves a visitor's explicit choice when local storage is available.
+- Audio, Haptics and Hardware shortcuts filter the selected projects. Featured work follows the same filters, and an accessible status reports the result count.
+- Responsive layouts, keyboard focus indicators, a skip link and reduced-motion support.
+- Main content remains visible when JavaScript is disabled. Storage restrictions do not prevent the controls from working.
 
-### 5. Creating Blog Posts
-- Copy `blog/post-1.html` and rename it (e.g., `post-2.html`, `post-3.html`)
-- Edit the content inside each blog post file
-- Update the blog cards in `index.html` (lines 121-152) with:
-  - Date
-  - Category
-  - Title
-  - Excerpt
-  - Link to the blog post file
+## Editing
 
-### 6. Adding Blog Images
-- Add blog header images to `assets/images/`
-- Name them: `blog-1.jpg`, `blog-2.jpg`, etc.
-- Reference them in your blog post HTML files
+Edit text directly in `index.html`. Project filters use each article's space-separated `data-cat` values. The original seven projects are preserved, including the featured apparatus. Audio features AMUSER; Hardware includes the apparatus and tactile rendering device.
 
-### 7. Adding Your Profile Picture
-- Add your profile image as `assets/images/profile.jpg`
-- Update the image path in the About section (line 177)
-
-## Color Scheme
-
-The website uses a punk-inspired aesthetic with:
-- **Primary Color**: Hot Pink (#ff006e)
-- **Secondary Color**: Cyan (#00f5ff)
-- **Accent Color**: Yellow (#ffbe0b)
-- **Background**: Dark (#0a0a0a, #1a1a1a)
-- **Text**: Light gray (#f0f0f0)
-
-### Customizing Colors
-Edit the CSS variables in `css/styles.css` (lines 9-14):
-```css
---color-primary: #ff006e;
---color-secondary: #00f5ff;
---color-accent: #ffbe0b;
-```
-
-## Features
-
-- **Smooth Scrolling Navigation**: Click navigation links for smooth scroll to sections
-- **Glitch Text Effect**: Punk-style glitch effect on key titles
-- **Project Modal**: Click "View Details" to see full project information
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Hover Animations**: Interactive hover effects on cards and buttons
-- **Scroll Animations**: Elements fade in as you scroll
-
-## Customization Tips
-
-### Adding More Projects
-1. Copy a project card block in `index.html` (lines 49-71)
-2. Update the project number, image, title, description, and tags
-3. Add corresponding data to `js/main.js` projectData object
-
-### Adding More Blog Posts
-1. Create a new HTML file in the `blog/` folder
-2. Copy the structure from `blog/post-1.html`
-3. Add a new blog card in `index.html` linking to your new post
-
-### Changing Fonts
-The website uses:
-- **Space Grotesk**: Modern, clean font for body text
-- **Courier Prime**: Monospace font for dates and technical text
-
-To change fonts, update the Google Fonts link in `index.html` (line 9) and CSS variables in `css/styles.css` (lines 16-17).
-
-## Opening the Website
-
-Simply open `index.html` in your web browser to view your website locally.
-
-For hosting online, you can use:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any web hosting service
-
-## Browser Compatibility
-
-Works on all modern browsers:
-- Chrome
-- Firefox
-- Safari
-- Edge
-
-## Need Help?
-
-- The code is well-commented to help you understand each section
-- All placeholder text is marked clearly
-- Image placeholders will show broken image icons until you add real images
-
-Enjoy building your research website!
+Adjust colours in the light and dark theme token blocks at the top of `css/main.css`. The artwork is a decorative, AI-generated Monet-inspired painting, not a reproduction attributed to Monet.
