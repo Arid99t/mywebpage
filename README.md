@@ -32,3 +32,9 @@ The older `classic.html`, blog pages and design-system folder remain separate fr
 Edit text directly in `index.html`. Project filters use each article's space-separated `data-cat` values. The original seven projects are preserved, including the featured apparatus. Audio features AMUSER; Hardware includes the apparatus and tactile rendering device.
 
 Adjust colours in the light and dark theme token blocks at the top of `css/main.css`. No framework or build tools are needed.
+
+## Publishing
+
+GitHub Pages publishes from `master`. Changes pushed to `main` must also be merged into `master` to update the live site.
+
+The homepage's CSS and JavaScript URLs include a `?v=` version. Change the corresponding version whenever either asset changes, so returning visitors do not load an older cached asset with new HTML. The current versions use the first 12 characters of each file's SHA-256 hash.
