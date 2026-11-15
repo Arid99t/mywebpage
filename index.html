@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arindam Dutta — Audio, Haptics &amp; Hardware</title>
     <script>
-        try {
-            const saved = localStorage.getItem('ad-theme');
+        (function () {
+            let saved;
+            try { saved = localStorage.getItem('ad-theme'); } catch (_) {}
             document.documentElement.dataset.theme = saved === 'light' || saved === 'dark'
                 ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        } catch (_) {}
+        })();
     </script>
     <meta name="description" content="Arindam Dutta (Arin) — research engineer working where real-time systems meet human perception. Audio, haptic hardware, XR pipelines and psychophysics. Birmingham, UK.">
     <meta name="author" content="Arindam Dutta">
@@ -25,200 +26,87 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ==================== NAV ==================== -->
-<header class="nav" id="nav">
-    <div class="nav__inner">
-        <a href="#hero" class="nav__logo">
-            <span class="nav__monogram" aria-hidden="true">ad.</span><span>Arindam&nbsp;Dutta</span>
+<div class="page-shell" id="hero">
+    <aside class="profile" aria-label="Profile and contact">
+        <a class="profile__photo-link" href="#about" aria-label="About Arindam Dutta">
+            <img class="profile__photo" src="assets/images/profile.jpeg" alt="Arindam Dutta" width="176" height="176" loading="eager">
         </a>
-
-        <nav class="nav__links" id="navLinks" aria-label="Primary">
-            <a href="#about" class="nav__link"><span class="slash">//</span> about</a>
-            <a href="#expertise" class="nav__link"><span class="slash">//</span> expertise</a>
-            <a href="#research" class="nav__link"><span class="slash">//</span> research</a>
-            <a href="#work" class="nav__link"><span class="slash">//</span> work</a>
-            <a href="#experience" class="nav__link"><span class="slash">//</span> experience</a>
-            <a href="#contact" class="nav__link"><span class="slash">//</span> contact</a>
-        </nav>
-
-        <div class="nav__actions">
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme" title="Toggle theme">
-                <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
-                <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
-            </button>
-            <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-                <span></span><span></span><span></span>
-            </button>
+        <div class="profile__identity">
+            <h1>Arindam Dutta</h1>
+            <p class="profile__alias">You can call me Arin.</p>
+            <p class="profile__role">Haptics &amp; XR Research Engineer</p>
+            <p class="profile__affiliation">VR Lab<br>University of Birmingham</p>
+            <p class="profile__location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Birmingham, UK</p>
         </div>
-    </div>
-</header>
+        <div class="profile__links">
+            <a class="profile__email" href="mailto:arindam.dutta99999@gmail.com">arindam.dutta99999@gmail.com</a>
+            <div class="profile__social">
+                <a href="https://github.com/Arid99t" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/arin99/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+        <p class="profile__availability"><span class="status-dot" aria-hidden="true"></span>Open to research opportunities</p>
+        <div class="profile__interests">
+            <p class="label">Research interests</p>
+            <a href="#work" data-focus="audio">Audio &amp; real-time DSP <span aria-hidden="true">↗</span></a>
+            <a href="#work" data-focus="haptics">Haptics &amp; perception <span aria-hidden="true">↗</span></a>
+            <a href="#work" data-focus="hardware">Hardware &amp; systems <span aria-hidden="true">↗</span></a>
+        </div>
+    </aside>
 
-<main id="main">
+    <main id="main" tabindex="-1">
+        <header class="nav" id="nav">
+            <div class="nav__inner">
+                <nav class="nav__links" id="navLinks" aria-label="Primary">
+                    <a href="#about" class="nav__link is-active" aria-current="location">About</a>
+                    <a href="#research" class="nav__link">Research</a>
+                    <a href="#work" class="nav__link">Projects</a>
+                    <a href="#experience" class="nav__link">Experience</a>
+                    <a href="#expertise" class="nav__link">Expertise</a>
+                    <a href="#contact" class="nav__link">Contact</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme" title="Toggle theme">
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+                </button>
+            </div>
+        </header>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero" id="hero">
-        <div class="hero__painting" aria-hidden="true"></div>
-        <div class="hero__inner">
-            <div class="hero__text">
-                <p class="kicker reveal"><span class="status-dot" aria-hidden="true"></span> Research engineer <span class="kicker__divider">/</span> Birmingham, UK</p>
-                <h1 class="hero__name reveal">Arindam Dutta<span class="hero__alias">You can call me Arin.</span></h1>
-                <p class="hero__role reveal">Haptics &amp; XR Research Engineer</p>
-                <p class="hero__focus reveal">Audio. Haptics. Hardware.</p>
-                <p class="hero__tag reveal">I build the <span class="hl">hardware and software</span> for immersive
-                    experiments — then run the studies that show what people
-                    <span class="hl">actually perceive</span>.</p>
-
-                <div class="hero__cta reveal">
-                    <a href="#work" class="btn btn--primary">View my work <span aria-hidden="true">↗</span></a>
-                    <a href="#research" class="btn btn--ghost">Read the research <span aria-hidden="true">→</span></a>
+        <section class="section about" id="about" aria-labelledby="aboutTitle">
+            <div class="container">
+                <h2 class="section__title" id="aboutTitle">About me</h2>
+                <p class="about__lead">I build interactive systems to understand how we <span class="hl">hear, touch, and perceive</span>.</p>
+                <p>I'm a Research Associate in the VR Lab at the University of Birmingham. My work brings together
+                    <strong>haptic devices, real-time software, and perceptual studies</strong> — from building the
+                    apparatus and writing the firmware to measuring what people actually experience.</p>
+                <p>With a BSc in Physics and an MSc in Human-Computer Interaction, I work across signal processing,
+                    experimental design, and XR development. I've developed for Meta Quest, Apple Vision Pro, Valve
+                    Index, and iPad, and shipped a consumer AR app to the App Store and Google Play.</p>
+                <p>I'm particularly interested in tactile feedback, visuo-haptic perception, and the timing of
+                    distributed audio and interactive systems.</p>
+                <div class="about__topics" aria-label="Focus areas">
+                    <a href="#work" data-focus="audio">Audio</a>
+                    <a href="#work" data-focus="haptics">Haptics</a>
+                    <a href="#work" data-focus="hardware">Hardware</a>
+                    <span>Real-time systems. Human perception.</span>
                 </div>
-
-                <div class="hero__social reveal">
-                    <a href="mailto:arindam.dutta99999@gmail.com" title="Email">Email</a>
-                    <a href="https://github.com/Arid99t" target="_blank" rel="noopener" title="GitHub">GitHub</a>
-                    <a href="https://www.linkedin.com/in/arin99/" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
-                </div>
             </div>
-
-            <div class="hero__portrait reveal">
-                <div class="hero__portrait-frame">
-                    <img src="assets/images/profile.jpeg" alt="Arindam Dutta" loading="eager">
-                </div>
-                <span class="hero__portrait-badge"><span class="status-dot" aria-hidden="true"></span> Open to research opportunities</span>
-            </div>
-        </div>
-
-        <div class="hero__foot"><span>Engineering experiences. Understanding perception.</span><a href="#about" class="hero__scroll" aria-label="Explore about Arindam">A little more about me <span aria-hidden="true">↓</span></a></div>
-    </section>
-
-    <section class="focus-strip" aria-label="Research focus">
-        <a href="#work" class="focus-item" data-focus="audio"><span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 13v6m5-11v16m5-20v24m5-17v10m5-14v18m5-12v6"/></svg></span><span><strong>Audio &amp; signal</strong><small>Real-time DSP &amp; musical synchronisation</small></span><span class="focus-arrow" aria-hidden="true">↗</span></a>
-        <a href="#work" class="focus-item" data-focus="haptics"><span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 17V9a2 2 0 0 1 4 0v7-11a2 2 0 0 1 4 0v11-9a2 2 0 0 1 4 0v10-5a2 2 0 0 1 4 0v9c0 6-4 9-9 9-4 0-6-2-8-5l-4-6a2 2 0 0 1 3-3l4 4"/></svg></span><span><strong>Haptics &amp; perception</strong><small>Tactile feedback &amp; perceptual studies</small></span><span class="focus-arrow" aria-hidden="true">↗</span></a>
-        <a href="#work" class="focus-item" data-focus="hardware"><span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="7" y="7" width="18" height="18" rx="2"/><rect x="12" y="12" width="8" height="8" rx="1"/><path d="M11 3v4m10-4v4M11 25v4m10-4v4M3 11h4m-4 10h4m18-10h4m-4 10h4"/></svg></span><span><strong>Hardware &amp; systems</strong><small>Custom devices &amp; embedded control</small></span><span class="focus-arrow" aria-hidden="true">↗</span></a>
-    </section>
-
-    <!-- ==================== ABOUT ==================== -->
-    <section class="section about" id="about">
-        <div class="container">
-            <p class="label reveal"><span class="slash">//</span> 01 — about</p>
-            <h2 class="about__statement reveal">
-                I work where real-time systems meet human perception — and what a system delivers is
-                <span class="hl">rarely what it thinks it is delivering</span>.
-            </h2>
-            <div class="about__cols">
-                <p class="reveal">My work runs as a loop. Design an apparatus — voice-coil actuators, stepper-driven
-                    linear stages, ESP32 firmware, an NI DAQ — drive it from Unity under deterministic sub-frame timing,
-                    then run controlled psychophysics against it: 2AFC sessions, PSE and JND estimates, detection
-                    thresholds, with 16 to 64 participants per study. The engineering and the measurement are the same
-                    job.</p>
-                <p class="reveal">A physics BSc gives me the signal-processing and modelling side; an
-                    <span class="hl">MSc in Human-Computer Interaction</span> gives me experimental design, statistics
-                    and ethics protocols. I've deployed to Meta Quest 1/2/3, Apple Vision Pro, Valve Index and iPad, and
-                    shipped a consumer AR app to the App Store and Google Play.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== EXPERTISE ==================== -->
-    <section class="section expertise" id="expertise">
-        <div class="container">
-            <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 02 — expertise</p>
-                <h2 class="section__title">What I work with</h2>
-            </div>
-
-            <article class="audio-expertise reveal">
-                <span class="audio-expertise__mark" aria-hidden="true">∿</span>
-                <div><p class="label">In focus · audio &amp; signal processing</p><h3>Sound, synchronised.</h3><p>Adaptive tempo synchronisation for geographically distributed musicians, real-time DSP, and tactile signal synthesis — connecting the timing of what we hear with what we feel.</p></div>
-                <a href="#work" class="text-link" data-focus="audio">Explore audio work ↗</a>
-            </article>
-
-            <div class="expertise__grid">
-                <article class="card card--expertise reveal">
-                    <span class="card__num">01</span>
-                    <h3>Haptics &amp; Actuation</h3>
-                    <p>Voice-coil actuators and force-sensitive resistors driven over an NI USB-6343 DAQ; stepper-driven
-                        dual linear stages rendering object widths from 3.5 to 90&nbsp;cm; real-time tactile signal
-                        synthesis and streaming.</p>
-                    <ul class="chips">
-                        <li>Voice coils</li><li>Syntacts</li><li>NI USB-6343</li><li>Stepper stages</li><li>FSR</li><li>DSP</li>
-                    </ul>
-                </article>
-
-                <article class="card card--expertise reveal">
-                    <span class="card__num">02</span>
-                    <h3>XR Development</h3>
-                    <p>Multi-platform Unity (C#) with OpenXR and the Meta XR Interaction SDK, hand tracking and hand
-                        redirection pipelines, and rendering-path profiling to hold frame rate under load.</p>
-                    <ul class="chips">
-                        <li>Unity</li><li>OpenXR</li><li>Meta Quest 1/2/3</li><li>Vision Pro</li><li>Valve Index</li><li>Unreal</li>
-                    </ul>
-                </article>
-
-                <article class="card card--expertise reveal">
-                    <span class="card__num">03</span>
-                    <h3>Perceptual Evaluation</h3>
-                    <p>Full-cycle user studies: protocol design, ethics approval, recruitment, within-subjects 2AFC
-                        sessions, psychometric model fitting and manuscript writing. Studies of 16 to 64 participants.</p>
-                    <ul class="chips">
-                        <li>2AFC</li><li>PSE / JND</li><li>Detection thresholds</li><li>Python</li><li>R</li>
-                    </ul>
-                </article>
-
-                <article class="card card--expertise reveal">
-                    <span class="card__num">04</span>
-                    <h3>Real-Time &amp; Distributed Systems</h3>
-                    <p>Adaptive synchronisation under variable transport delay, real-time control loops, deterministic
-                        serial and DAQ pipelines, and latency and frame-rate profiling of interactive applications.</p>
-                    <ul class="chips">
-                        <li>C++</li><li>Swift</li><li>ESP32 / Teensy</li><li>Serial</li><li>Latency profiling</li>
-                    </ul>
-                </article>
-
-                <article class="card card--expertise reveal">
-                    <span class="card__num">05</span>
-                    <h3>Machine Learning &amp; Vision</h3>
-                    <p>Sequence modelling with CRNN and CTC decoding over continuous video with temporal stability
-                        gating; SAM&nbsp;2 video segmentation with CUDA-accelerated multi-GPU inference.</p>
-                    <ul class="chips">
-                        <li>PyTorch</li><li>OpenCV</li><li>CRNN + CTC</li><li>SAM 2</li><li>CUDA</li>
-                    </ul>
-                </article>
-
-                <article class="card card--expertise reveal">
-                    <span class="card__num">06</span>
-                    <h3>Prototyping &amp; Tooling</h3>
-                    <p>Mechanical design and 3D printing for custom rigs and enclosures, with the software toolchain to
-                        keep it all reproducible.</p>
-                    <ul class="chips">
-                        <li>SolidWorks</li><li>Fusion 360</li><li>Blender</li><li>Git / Actions</li><li>CMake</li>
-                    </ul>
-                </article>
-            </div>
-
-            <blockquote class="quote reveal">
-                <p>“A haptic system doesn't deliver what it renders — it delivers what the person notices.”</p>
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- ==================== RESEARCH ==================== -->
+        </section>
     <section class="section research" id="research">
         <div class="container">
-            <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 03 — research</p>
-                <h2 class="section__title">Manuscripts in preparation</h2>
+            <div class="section__head">
+                <h2 class="section__title">Research</h2><p class="section__intro">Current manuscripts and ongoing studies in haptics and perception.</p>
             </div>
 
             <ol class="pubs">
-                <li class="pub reveal">
+                <li class="pub">
                     <span class="pub__num">01</span>
                     <div class="pub__body">
                         <p class="pub__authors">Y. Lin, E. Ofek, <strong>A. Dutta</strong>, M. Di Luca</p>
@@ -232,7 +120,7 @@
                     <span class="pub__status">Complete · submitting to IEEE VR 2027</span>
                 </li>
 
-                <li class="pub reveal">
+                <li class="pub">
                     <span class="pub__num">02</span>
                     <div class="pub__body">
                         <p class="pub__authors"><strong>A. Dutta</strong>, E. Ofek, M. Di Luca</p>
@@ -246,7 +134,7 @@
                     <span class="pub__status">In preparation · CHI 2027</span>
                 </li>
 
-                <li class="pub reveal">
+                <li class="pub">
                     <span class="pub__num">03</span>
                     <div class="pub__body">
                         <p class="pub__authors"><strong>A. Dutta</strong> et al.</p>
@@ -261,17 +149,14 @@
             </ol>
         </div>
     </section>
-
-    <!-- ==================== WORK ==================== -->
     <section class="section work" id="work">
         <div class="container">
-            <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 04 — work</p>
+            <div class="section__head">
                 <h2 class="section__title">Selected projects</h2>
             </div>
 
             <!-- Filters -->
-            <div class="filters reveal" id="filters" role="group" aria-label="Filter projects">
+            <div class="filters" id="filters" role="group" aria-label="Filter projects">
                 <button class="filter is-active" data-filter="all">All projects</button>
                 <button class="filter" data-filter="audio">Audio</button>
                 <button class="filter" data-filter="haptics">Haptics</button>
@@ -280,10 +165,10 @@
                 <button class="filter" data-filter="systems">Systems &amp; ML</button>
                 <button class="filter" data-filter="shipped">Shipped</button>
             </div>
-            <p class="filter-summary" id="filterSummary" role="status" aria-live="polite"></p>
+            <p class="filter-summary" id="filterSummary" role="status" aria-live="polite">All projects · 7 projects</p>
 
             <!-- Featured -->
-            <article class="featured reveal" data-cat="haptics hardware">
+            <article class="featured" data-cat="haptics hardware">
                 <div class="featured__media" data-cover="rig">
                     <span class="featured__store">● Research apparatus · in active use</span>
                     <svg class="rig-illustration" viewBox="0 0 400 230" role="img" aria-label="Schematic illustration of two opposing linear stages">
@@ -319,7 +204,7 @@
             <div class="work__grid" id="workGrid">
 
                 <!-- Haptic rendering device -->
-                <article class="card card--project reveal" data-cat="haptics hardware systems">
+                <article class="card card--project" data-cat="haptics hardware systems">
                     <div class="card__cover" data-cover="haptics"><svg class="project-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 25c9-23 17 23 26 0s17 23 26 0M6 40c9-23 17 23 26 0s17 23 26 0"/></svg></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> haptics · C++ / Syntacts</p>
@@ -334,7 +219,7 @@
                 </article>
 
                 <!-- Hand redirection -->
-                <article class="card card--project reveal" data-cat="haptics xr">
+                <article class="card card--project" data-cat="haptics xr">
                     <div class="card__cover" data-cover="hand"><svg class="project-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 17V9a2 2 0 0 1 4 0v7-11a2 2 0 0 1 4 0v11-9a2 2 0 0 1 4 0v10-5a2 2 0 0 1 4 0v9c0 6-4 9-9 9-4 0-6-2-8-5l-4-6a2 2 0 0 1 3-3l4 4"/></svg></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> research · Meta Quest</p>
@@ -351,7 +236,7 @@
                 </article>
 
                 <!-- AMUSER -->
-                <article class="card card--project reveal" data-cat="audio xr systems shipped">
+                <article class="card card--project" data-cat="audio xr systems shipped">
                     <div class="card__cover" data-cover="arme"><svg class="project-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 26v12m8-23v34m9-41v48m9-35v22m9-29v36m9-40v44m8-28v12"/></svg></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> shipped · Swift / visionOS</p>
@@ -369,7 +254,7 @@
                 </article>
 
                 <!-- Kenilworth Revealed -->
-                <article class="card card--project reveal" data-cat="xr systems shipped">
+                <article class="card card--project" data-cat="xr systems shipped">
                     <div class="card__cover" data-cover="kenilworth"><span class="cover__mono">KR</span></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> shipped · iOS &amp; Android</p>
@@ -383,7 +268,7 @@
                 </article>
 
                 <!-- VR Chemistry Lab -->
-                <article class="card card--project reveal" data-cat="xr shipped">
+                <article class="card card--project" data-cat="xr shipped">
                     <div class="card__cover" data-cover="chem"><svg class="project-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M23 8h18m-15 0v19L12 50q-4 7 5 7h30q9 0 5-7L38 27V8M20 38h24"/><circle cx="27" cy="46" r="2"/><circle cx="37" cy="49" r="2"/></svg></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> production · Unity</p>
@@ -399,7 +284,7 @@
                 </article>
 
                 <!-- Real-Time CV Pipeline -->
-                <article class="card card--project reveal" data-cat="systems">
+                <article class="card card--project" data-cat="systems">
                     <div class="card__cover" data-cover="vision"><svg class="project-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 20V8h12m24 0h12v12M8 44v12h12m24 0h12V44M12 32s8-13 20-13 20 13 20 13-8 13-20 13S12 32 12 32Z"/><circle cx="32" cy="32" r="6"/></svg></div>
                     <div class="card__body">
                         <p class="label"><span class="slash">//</span> self-directed · C++ / Python</p>
@@ -417,22 +302,19 @@
             </div>
         </div>
     </section>
-
-    <!-- ==================== EXPERIENCE ==================== -->
     <section class="section experience" id="experience">
         <div class="container">
-            <div class="section__head reveal">
-                <p class="label"><span class="slash">//</span> 05 — experience</p>
-                <h2 class="section__title">Where I've worked</h2>
+            <div class="section__head">
+                <h2 class="section__title">Experience &amp; education</h2>
             </div>
 
             <div class="timeline">
-                <article class="timeline__item reveal">
+                <article class="timeline__item">
                     <div class="timeline__when">Dec 2024 — Present</div>
                     <div class="timeline__body">
                         <h3>Research Associate <span class="timeline__at">— VR Lab, University of Birmingham</span></h3>
                         <p class="timeline__place">Birmingham, UK</p>
-                        <ul class="bullets">
+                        <details class="role-details"><summary>Role details</summary><ul class="bullets">
                             <li><strong>Real-time distributed synchronisation.</strong> Designed and implemented the
                                 AMUSER adaptive tempo-sync algorithm (Swift, C++ core), shipped on iPad and Apple Vision
                                 Pro.</li>
@@ -450,44 +332,44 @@
                             <li>Coordinated the cross-institutional BhamXR seminar series — 8 events, 30+ researchers
                                 across UK XR groups.</li>
                         </ul>
-                        <ul class="chips"><li>Unity</li><li>C#</li><li>C++</li><li>Swift</li><li>ESP32</li><li>NI DAQ</li><li>Psychophysics</li></ul>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>C++</li><li>Swift</li><li>ESP32</li><li>NI DAQ</li><li>Psychophysics</li></ul></details>
                     </div>
                 </article>
 
-                <article class="timeline__item reveal">
+                <article class="timeline__item">
                     <div class="timeline__when">Jul 2024 — Sep 2024</div>
                     <div class="timeline__body">
                         <h3>VR Software Developer <span class="timeline__at">— Univ. of Birmingham (CTL EdTech)</span></h3>
                         <p class="timeline__place">Birmingham, UK</p>
-                        <ul class="bullets">
+                        <details class="role-details"><summary>Role details</summary><ul class="bullets">
                             <li>Shipped 4 interactive VR simulation modules in Unity, from prototype to production
                                 rollout for a first-year student cohort.</li>
                             <li>Profiled and optimised the rendering path to hold stable frame rates and low-latency
                                 interaction under load, and translated stakeholder requirements into modular, reusable
                                 C# architecture.</li>
                         </ul>
-                        <ul class="chips"><li>Unity</li><li>C#</li><li>Rendering</li><li>Education XR</li></ul>
+                        <ul class="chips"><li>Unity</li><li>C#</li><li>Rendering</li><li>Education XR</li></ul></details>
                     </div>
                 </article>
 
-                <article class="timeline__item reveal">
+                <article class="timeline__item">
                     <div class="timeline__when">Jun 2024 — Jul 2024</div>
                     <div class="timeline__body">
                         <h3>Technology Intern <span class="timeline__at">— Bright Network IEUK 2024</span></h3>
                         <p class="timeline__place">United Kingdom — Remote</p>
-                        <ul class="bullets">
+                        <details class="role-details"><summary>Role details</summary><ul class="bullets">
                             <li>Analysed user-feedback datasets in Python to identify technical pain points, and
                                 produced a prioritised 6-month feature roadmap.</li>
                         </ul>
-                        <ul class="chips"><li>Python</li><li>Data analysis</li><li>Product</li></ul>
+                        <ul class="chips"><li>Python</li><li>Data analysis</li><li>Product</li></ul></details>
                     </div>
                 </article>
             </div>
 
             <!-- Education + certificates -->
             <div class="edu">
-                <div class="edu__col reveal">
-                    <p class="label"><span class="slash">//</span> education</p>
+                <div class="edu__col">
+                    <h3 class="label">Education</h3>
                     <div class="edu__item">
                         <h4>MSc Human-Computer Interaction</h4>
                         <p class="edu__meta">University of Birmingham, UK · 2023–2024</p>
@@ -501,8 +383,8 @@
                             Classical Mechanics · Thermodynamics &amp; Statistical Physics · Matrices &amp; Tensors</p>
                     </div>
                 </div>
-                <div class="edu__col reveal">
-                    <p class="label"><span class="slash">//</span> certificates</p>
+                <div class="edu__col">
+                    <h3 class="label">Certificates</h3>
                     <ul class="edu__certs">
                         <li>Computer Vision with PyTorch &amp; TensorFlow <span>2026</span></li>
                         <li>Software Development in C++ <span>2026</span></li>
@@ -512,34 +394,103 @@
             </div>
         </div>
     </section>
+    <section class="section expertise" id="expertise">
+        <div class="container">
+            <div class="section__head">
+                <h2 class="section__title">Technical expertise</h2>
+            </div>
 
-    <!-- ==================== CONTACT ==================== -->
+            <article class="audio-expertise">
+                <span class="audio-expertise__mark" aria-hidden="true">∿</span>
+                <div><p class="label">In focus · audio &amp; signal processing</p><h3>Sound, synchronised.</h3><p>Adaptive tempo synchronisation for geographically distributed musicians, real-time DSP, and tactile signal synthesis — connecting the timing of what we hear with what we feel.</p></div>
+                <a href="#work" class="text-link" data-focus="audio">Explore audio work ↗</a>
+            </article>
+
+            <div class="expertise__grid">
+                <article class="card card--expertise">
+                    <span class="card__num">01</span>
+                    <h3>Haptics &amp; Actuation</h3>
+                    <p>Voice-coil actuators and force-sensitive resistors driven over an NI USB-6343 DAQ; stepper-driven
+                        dual linear stages rendering object widths from 3.5 to 90&nbsp;cm; real-time tactile signal
+                        synthesis and streaming.</p>
+                    <ul class="chips">
+                        <li>Voice coils</li><li>Syntacts</li><li>NI USB-6343</li><li>Stepper stages</li><li>FSR</li><li>DSP</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise">
+                    <span class="card__num">02</span>
+                    <h3>XR Development</h3>
+                    <p>Multi-platform Unity (C#) with OpenXR and the Meta XR Interaction SDK, hand tracking and hand
+                        redirection pipelines, and rendering-path profiling to hold frame rate under load.</p>
+                    <ul class="chips">
+                        <li>Unity</li><li>OpenXR</li><li>Meta Quest 1/2/3</li><li>Vision Pro</li><li>Valve Index</li><li>Unreal</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise">
+                    <span class="card__num">03</span>
+                    <h3>Perceptual Evaluation</h3>
+                    <p>Full-cycle user studies: protocol design, ethics approval, recruitment, within-subjects 2AFC
+                        sessions, psychometric model fitting and manuscript writing. Studies of 16 to 64 participants.</p>
+                    <ul class="chips">
+                        <li>2AFC</li><li>PSE / JND</li><li>Detection thresholds</li><li>Python</li><li>R</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise">
+                    <span class="card__num">04</span>
+                    <h3>Real-Time &amp; Distributed Systems</h3>
+                    <p>Adaptive synchronisation under variable transport delay, real-time control loops, deterministic
+                        serial and DAQ pipelines, and latency and frame-rate profiling of interactive applications.</p>
+                    <ul class="chips">
+                        <li>C++</li><li>Swift</li><li>ESP32 / Teensy</li><li>Serial</li><li>Latency profiling</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise">
+                    <span class="card__num">05</span>
+                    <h3>Machine Learning &amp; Vision</h3>
+                    <p>Sequence modelling with CRNN and CTC decoding over continuous video with temporal stability
+                        gating; SAM&nbsp;2 video segmentation with CUDA-accelerated multi-GPU inference.</p>
+                    <ul class="chips">
+                        <li>PyTorch</li><li>OpenCV</li><li>CRNN + CTC</li><li>SAM 2</li><li>CUDA</li>
+                    </ul>
+                </article>
+
+                <article class="card card--expertise">
+                    <span class="card__num">06</span>
+                    <h3>Prototyping &amp; Tooling</h3>
+                    <p>Mechanical design and 3D printing for custom rigs and enclosures, with the software toolchain to
+                        keep it all reproducible.</p>
+                    <ul class="chips">
+                        <li>SolidWorks</li><li>Fusion 360</li><li>Blender</li><li>Git / Actions</li><li>CMake</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
     <section class="section contact" id="contact">
         <div class="container">
-            <p class="label reveal"><span class="slash">//</span> 06 — contact</p>
-            <h2 class="contact__title reveal">Let's build something you can <span class="hl">feel</span>.</h2>
-            <p class="contact__lead reveal">I'm looking for research-engineering work in haptics and XR — the kind
+            <p class="label">Get in touch</p>
+            <h2 class="contact__title">Let's talk.</h2>
+            <p class="contact__lead">I'm looking for research-engineering work in haptics and XR — the kind
                 where the device, the real-time software and the perceptual study are all part of the same problem. If
                 that sounds like your team, I'd love to talk.</p>
-            <a href="mailto:arindam.dutta99999@gmail.com" class="contact__email reveal">arindam.dutta99999@gmail.com</a>
-            <div class="contact__links reveal">
+            <a href="mailto:arindam.dutta99999@gmail.com" class="contact__email">arindam.dutta99999@gmail.com</a>
+            <div class="contact__links">
                 <a href="https://github.com/Arid99t" target="_blank" rel="noopener">GitHub ↗</a>
                 <a href="https://www.linkedin.com/in/arin99/" target="_blank" rel="noopener">LinkedIn ↗</a>
                 <a href="mailto:arindam.dutta99999@gmail.com">Email ↗</a>
             </div>
         </div>
     </section>
-
-</main>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-    <div class="container footer__inner">
-        <span>© 2026 Arindam Dutta (Arin)</span>
-        <span class="footer__mono">Built with care in Birmingham, UK</span>
-    </div>
-</footer>
-
+        <footer class="footer">
+            <span>© 2026 Arindam Dutta</span>
+            <a href="#about">Back to top <span aria-hidden="true">↑</span></a>
+        </footer>
+    </main>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

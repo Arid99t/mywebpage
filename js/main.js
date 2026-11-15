@@ -2,6 +2,7 @@
 (function () {
     'use strict';
     const root = document.documentElement;
+    root.classList.add('js');
     const themeToggle = document.getElementById('themeToggle');
     const themePreference = window.matchMedia('(prefers-color-scheme: dark)');
     let explicitTheme = false;
@@ -26,48 +27,20 @@
         if (!explicitTheme) applyTheme(event.matches ? 'dark' : 'light');
     });
 
-    const burger = document.getElementById('navBurger');
-    const links = document.getElementById('navLinks');
-    function closeMenu(returnFocus) {
-        if (!burger || !links) return;
-        const wasOpen = links.classList.contains('is-open');
-        links.classList.remove('is-open');
-        burger.classList.remove('is-open');
-        burger.setAttribute('aria-expanded', 'false');
-        burger.setAttribute('aria-label', 'Open menu');
-        if (returnFocus && wasOpen) burger.focus();
-    }
-    if (burger && links) {
-        burger.addEventListener('click', function () {
-            const open = links.classList.toggle('is-open');
-            burger.classList.toggle('is-open', open);
-            burger.setAttribute('aria-expanded', String(open));
-            burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        });
-        links.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () { closeMenu(false); });
-        });
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') closeMenu(true);
-        });
-        document.addEventListener('click', function (event) {
-            if (!event.target.closest('#nav')) closeMenu(false);
-        });
-        window.matchMedia('(min-width: 801px)').addEventListener('change', function (event) {
-            if (event.matches) closeMenu(false);
-        });
-    }
-
     const nav = document.getElementById('nav');
     const sections = Array.from(document.querySelectorAll('main section[id]'));
     const navLinks = Array.from(document.querySelectorAll('.nav__link'));
     let scrollPending = false;
     function updateNavigation() {
         if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 12);
-        let active = 'hero';
+        let active = 'about';
         sections.forEach(function (section) {
-            if (section.getBoundingClientRect().top <= 150) active = section.id;
+            if (section.getBoundingClientRect().top <= 110) active = section.id;
         });
+        if (sections.length && window.scrollY > 0 &&
+            window.scrollY + window.innerHeight >= root.scrollHeight - 2) {
+            active = sections[sections.length - 1].id;
+        }
         navLinks.forEach(function (link) {
             const selected = link.hash === '#' + active;
             link.classList.toggle('is-active', selected);
@@ -115,15 +88,4 @@
         filterProjects('all');
     }
 
-    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.05 });
-        document.querySelectorAll('.reveal').forEach(function (element) { observer.observe(element); });
-    }
 })();
